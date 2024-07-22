@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"hangman"</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
+</head>
+<body>
+    <header><h1>"hangman"' Game <span class="js">JS</span></h1></header>
+    
+    <div>
+        <canvas id="canvas"></canvas>
+        <div id="userLetter"></div>
+    </div>
+
+    <div id="msg">
+        <h2><span class="js">Adivina la palabra</span></h2>
+        <ul class="list">
+            <li>Tienes <span class="js">60 segundos</span> para adivinar la palabra.</li>           
+            <li>Si adivinas <span class="js">incorrectamente  6 veces</span>, perderás.</li>
+            <li><span class="js">Presiona "START"</span> para comenzar el juego.</li>
+            <li>¡Diviértete y buena suerte!</li>
+        </ul>
+    </div>
+
+    <div id="wordContainer"></div>
+    <button id="starBtn">START</button>
+
+    <div id="messageContainer" style="display: none;">
+        <p id="message"></p>
+    </div>
+
+    <div id="timer">Tiempo restante: <span id="countdown">60</span> segundos</div>
+    
+<script src="./app.js"></script>
+<script src="./palabras.js"></script>
+</body>
+</html>
