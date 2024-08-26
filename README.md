@@ -5,3 +5,4 @@ Aquí tenemos la lista de proyectos:
 01. hangman game 
 02. Cifrado Cesar 
 03. Weather app
+04. Calculadora
