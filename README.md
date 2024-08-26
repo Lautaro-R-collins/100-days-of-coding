@@ -7,5 +7,5 @@ Aquí tenemos la lista de proyectos:
 02. Cifrado Cesar 
 03. Weather app
 04. Calculadora
-0.5 To Do List
+05. To Do List
 06. Caja registradora
