@@ -10,28 +10,28 @@ let cid = [
   ["TWENTY", 60],
   ["ONE HUNDRED", 100]
 ];
-//Selecting DOM elements
+//Elementos del DOM
 const displayChangeDue = document.getElementById('change-due');
 const cash = document.getElementById('cash');
 const purchaseBtn = document.getElementById('purchase-btn');
 const priceScreen = document.getElementById('price-screen');
 const cashDrawerDisplay = document.getElementById('cash-drawer-display');
 
-// Check if the customer has enough money to buy the item
+
 const checkCashRegister = () => {
+  // verificar si el cliente tiene suficiente dinero o el dinero exacto
   if (Number(cash.value) < price) {
-    alert('Customer does not have enough money to purchase the item');
+    alert('El cliente no tiene dinero suficiente para realizar la compra');
     cash.value = '';
     return;
-  }
-  // Check if the customer paid exactly the price of the item
-  if (Number(cash.value) === price) {
+  } else if (Number(cash.value) === price) {
     displayChangeDue.innerHTML =
-      '<p>No change due - customer paid with exact cash</p>';
+    '<p>No necesita vuelto - El cliente pago con el dinero exacto</p>';
     cash.value = '';
     return;
   }
-  // Calculate the change due 
+
+  // Calcular el cambio a pagar
   let changeDue = Number(cash.value) - price;
   let reversedCid = [...cid].reverse();
   let denominations = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
@@ -42,15 +42,15 @@ const checkCashRegister = () => {
       .reduce((prev, curr) => prev + curr)
       .toFixed(2)
   );
-  // Check if there is enough cash
+  // Caso de Fondos insuficientes
   if (totalCID < changeDue) {
     return (displayChangeDue.innerHTML = '<p>Status: INSUFFICIENT_FUNDS</p>');
   }
-  // Check if the cash drawer has exactly the correct change
+  // Caso fondos exactos
   if (totalCID === changeDue) {
     result.status = 'CLOSED';
   }
-  // Calculates change using the coins available in the cash drawer
+  // Distribución del cambio
   for (let i = 0; i <= reversedCid.length; i++) {
     if (changeDue > denominations[i] && changeDue > 0) {
       let count = 0;
@@ -109,7 +109,7 @@ const updateUI = (change) => {
       .join('')}  
   `;
 };
-//format results
+// Formatear resultado
 const formatResults = (status, change) => {
   displayChangeDue.innerHTML = `<p>Status: ${status}</p>`;
   change.map(
@@ -118,7 +118,7 @@ const formatResults = (status, change) => {
   return;
 };
 
-// Add event listeners
+// event listeners
 purchaseBtn.addEventListener('click', checkResults);
 
 cash.addEventListener('keydown', e => {
