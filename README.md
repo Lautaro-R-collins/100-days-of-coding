@@ -9,3 +9,4 @@ Aquí tenemos la lista de proyectos:
 04. Calculadora
 05. To Do List
 06. Caja registradora
+07. Snake Game
