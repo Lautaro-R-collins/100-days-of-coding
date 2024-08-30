@@ -1,0 +1,93 @@
+body {
+    background: rgb(44,250,255);
+    background: radial-gradient(circle, rgb(32, 104, 105) 0%, rgb(13, 25, 70) 100%);
+    font-family: sans-serif;
+    color: #ffff;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.section-one {
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+button {
+    height: 110px;
+    width: 110px;
+    font-size: 4rem;
+    color: #ffff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease; 
+    margin: 5px;
+}
+
+button:hover {
+    opacity: 0.7; 
+}
+
+
+h1 {
+    text-align: center;
+    
+}
+
+.section-two {
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    height: 350px;
+}
+
+.estadisticas {
+    height: 105px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+}
+
+/* mensaje final */
+.oculto {
+    display: none;
+}
+
+
+#mensaje-final {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgb(13, 64, 105); 
+    padding: 60px; 
+    border-radius: 10px; 
+    color: #fff; 
+    width: 350px; 
+    text-align: center; 
+    z-index: 100; 
+    font-size: 1.2em;
+}
+
+
+#boton-reiniciar {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #2eb19b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+}
+
+#boton-reiniciar:hover {
+    background-color: #21886e;
+}
