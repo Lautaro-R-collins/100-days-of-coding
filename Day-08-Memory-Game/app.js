@@ -125,7 +125,7 @@ function finalizarJuego() {
     // Mostrar el mensaje de fin de juego
     mensajeFinal.classList.remove("oculto");
     mensajeFinal.innerHTML = `
-    Movimientos: ${movimientos} - Aciertos: ${aciertos}
+    Movimientos ${movimientos} Aciertos ${aciertos} Tiempo ${timer}
     <button id="boton-reiniciar" onclick="reiniciarJuego()">Reiniciar</button>
     `;
 }
