@@ -11,5 +11,5 @@
 - CSS
 - Javascript
 
-## Ejemplo
-[![tareas](https://pbs.twimg.com/media/F51v3E7WQAA2BKI?format=jpg&name=small "Ejemplo de tareas")](https://tu-url-aqui.com "Ejemplo de tareas")
+
+![to-do-list](./Screenshot%202024-09-04%20213754.png)
