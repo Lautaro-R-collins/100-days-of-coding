@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+body{
+    background: rgb(29, 29, 94);
+    color: rgb(10, 236, 218);
+    font-family: serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+    color:rgb(10, 236, 218);
+    font-family: "Bungee Shade", sans-serif;
+}
+
+#container{
+    margin: 5% auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box{
+    display: inline-block;
+    border: 5px solid rgb(10, 236, 218);
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+span{
+    position: absolute;
+    font-size: 75px;
+    font-family: sans-serif;
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    padding: 0;
+    margin: 5px;
+    margin-left: -35px;
+    cursor: pointer;
+}
+
+.top{
+    border-top: none;
+}
+
+.bottom{
+    border-bottom: none;
+}
+
+.left{
+    border-left: none;
+}
+
+.right{
+    border-right: none;
+}
+
+.alert{
+    height: 195px;
+    width: 125px;
+    display: inline-block;
+    background: rgb(42, 42, 133);
+    position: relative;
+    z-index: 10;
+    margin-top: -50%;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px rgb(10, 10, 66);
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+    box-sizing: content-box;
+    padding: 30px;
+    bottom: 50px;
+    top: 0;
+}
+
+button{
+    background: rgb(42, 42, 133);
+    border-radius: 2px;
+    color: rgb(10, 236, 218);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.activeBox{
+    background: rgb(4, 4, 48);
+}
+
+@keyframes larger{
+    from{
+        height: 75px;
+        width: 125px;
+    }
+
+    to{
+        height: 100px;
+        width: 250px;
+    }
+
+}
