@@ -11,3 +11,7 @@ Aquí tenemos la lista de proyectos:
 06. Caja registradora
 07. Snake Game
 08. Hangman game
+09. Pokédex
+10. ping-pong
+11. Log-In
+12 Ta Te Ti
