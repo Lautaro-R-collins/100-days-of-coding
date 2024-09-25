@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+    --border-radius: 8px;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    --container-width: 1200px;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-items: flex-end;
+    font-family: "Oleo Script", system-ui;
+    gap: 12px;
+    padding: 15px;
+    color: white;
+    background-color: rgb(8, 26, 59);
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: var(--spacing-lg);
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--grey);
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+
+button,
+input {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type='text'],
+input[type='number'] {
+  cursor: text;
+}
+  
+.btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    transition: filter 0.15s ease-in-out;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn-add {
+    margin-top: 60px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: rgb(18, 61, 141);
+    color: white;
+    padding: 15px;
+}
+.btn-remove {
+   background-color: red;
+   border-radius: var(--border-radius);
+   padding: 4px;
+   color: white;
+}
+.btn-remove:hover {
+    background-color: rgb(160, 12, 12);
+}
+
+.main {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+  
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+  
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    line-height: 1.2;
+}
+  
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+  
+  
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 400px;
+    max-width: 90%;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: darkred;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm); 
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; 
+}
+
+form label {
+    min-width: 80px; 
+    text-align: left; 
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    flex: 1; 
+}
+
+form input[type="checkbox"] {
+    width: 25px; 
+    height: 25px; 
+    margin-left: 10px; 
+}
+
+form button.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start; 
+    margin-top: 10px; 
+}
+
+form button.btn:hover {
+    background-color: #45a049;
+}
