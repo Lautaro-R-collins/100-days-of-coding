@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Product App</title>
+        <!-- Bootswatch Cosmo Theme -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"
+        />
+    
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="App.css" />
+      </head>
+<body>
+
+    <!-- barra navegacion -->
+    <nav class="navbar" style="background-color: #232638;">
+        <a class="navbar-brand text-white font-weight-bold" href="#">Listado de Prdoctos</a>
+    </nav>
+
+    <div class="container">
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4 class="font-weight-bold">Agregar Producto</h4>
+                    </div>
+                    
+                    <!-- formulario -->
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input
+                            type="text"
+                            id="name"
+                            placeholder="Nombre del producto"
+                            class="form-control"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                            type="number"
+                            id="price"
+                            step="0.01"
+                            placeholder="Precio del producto"
+                            class="form-control"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                            type="number"
+                            id="year"
+                            min="1900"
+                            max="2099"
+                            step="1"
+                            value="2024"
+                            class="form-control"
+                            />
+                        </div>
+                        <input
+                            type="submit"
+                            value="Enviar"
+                            class="btn btn-primary btn-block"
+                        />
+                        </form>
+                </div>
+            </div>
+            <!-- productos -->
+            <div id="product-list" class="col-md-8"></div>
+        </div>
+    </div>
+    <script src="App.js" type="module"></script>
+</body>
+</html>
